@@ -10,12 +10,21 @@ app.engine('handlebars', expressHandlebars({
 app.set('view engine', 'handlebars')
 app.use(express.static(__dirname + '/public'))
 
+const fortunes = [
+    "message1",
+    "message2",
+    "message3",
+    "message4",
+    "message5"
+]
+
 app.get('/', (req, res) => {
     res.render('home')
 })
 
 app.get('/about', (req, res) => {
-    res.render('about')
+    const randomFortune = fortunes[Math.floor(Math.random()*fortunes.length)]
+    res.render('about', {fortune: randomFortune})
 })
 
 app.use((req, res) => {
