@@ -1,0 +1,25 @@
+{
+    "dependencies": {
+        "express": "^4.18.2",
+        "express-handlebars": "^3.1.0"
+    },
+    "name": "boilerplate-node-express",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "nodemon --watch \"*.js\" --exec \"node\" index.js",
+        "start": "nodemon app"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/lucy-y/boilerplate-node-express-js.git"
+    },
+    "author": "lucy",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/lucy-y/boilerplate-node-express-js/issues"
+    },
+    "homepage": "https://github.com/lucy-y/boilerplate-node-express-js#readme",
+    "description": ""
+}
