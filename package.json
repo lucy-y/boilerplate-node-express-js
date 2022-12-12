@@ -7,7 +7,7 @@
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "jest --watch",
         "dev": "nodemon --watch \"*.js\" --exec \"node\" index.js",
         "start": "nodemon app"
     },
@@ -21,5 +21,8 @@
         "url": "https://github.com/lucy-y/boilerplate-node-express-js/issues"
     },
     "homepage": "https://github.com/lucy-y/boilerplate-node-express-js#readme",
-    "description": ""
+    "description": "",
+    "devDependencies": {
+        "jest": "^25.5.4"
+    }
 }
