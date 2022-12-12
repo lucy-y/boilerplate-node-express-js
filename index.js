@@ -3,6 +3,8 @@ const app = express()
 const expressHandlebars = require('express-handlebars')
 const port = process.env.PORT || 3000
 
+const fortune = require('./public/lib/fortune')
+
 app.engine('handlebars', expressHandlebars({
     defalutLayout: 'main'
 }))
@@ -10,21 +12,12 @@ app.engine('handlebars', expressHandlebars({
 app.set('view engine', 'handlebars')
 app.use(express.static(__dirname + '/public'))
 
-const fortunes = [
-    "message1",
-    "message2",
-    "message3",
-    "message4",
-    "message5"
-]
-
 app.get('/', (req, res) => {
     res.render('home')
 })
 
 app.get('/about', (req, res) => {
-    const randomFortune = fortunes[Math.floor(Math.random()*fortunes.length)]
-    res.render('about', {fortune: randomFortune})
+    res.render('about', {fortune: fortune.getFortune()})
 })
 
 app.use((req, res) => {
