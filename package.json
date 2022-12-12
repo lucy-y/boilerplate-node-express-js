@@ -8,6 +8,7 @@
     "main": "index.js",
     "scripts": {
         "test": "jest --watch",
+        "test-coverage": "jest --coverage",
         "dev": "nodemon --watch \"*.js\" --exec \"node\" index.js",
         "start": "nodemon app"
     },
