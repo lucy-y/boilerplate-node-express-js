@@ -10,7 +10,8 @@
         "test": "jest --watch",
         "test-coverage": "jest --coverage",
         "dev": "nodemon --watch \"*.js\" --exec \"node\" index.js",
-        "start": "nodemon app"
+        "start": "nodemon app",
+        "lint": "eslint index.js public/lib"
     },
     "repository": {
         "type": "git",
@@ -24,6 +25,9 @@
     "homepage": "https://github.com/lucy-y/boilerplate-node-express-js#readme",
     "description": "",
     "devDependencies": {
-        "jest": "^25.5.4"
+        "eslint": "^5.16.0",
+        "jest": "^25.5.4",
+        "portfinder": "^1.0.32",
+        "puppeteer": "^1.20.0"
     }
 }
